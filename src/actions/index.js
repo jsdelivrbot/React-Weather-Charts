@@ -15,11 +15,17 @@ export function fetchWeather(city){
   const url = `${rootUrl}&q=${city},${countryCode}`;
   const request = axios.get(url);
 
+  console.log('Request — ', request);
+
   return {
 
     // reference the action type const
     type: FETCH_WEATHER,
     payload: request
+
+    //// payload === Promise : intercepted by 'redux-promise'
+    /// waits for Promise to resolve
+    // returns a new payload: response from Promise
 
   };
 }
