@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import classNames from 'classnames';
+
 import { fetchWeather } from '../actions/index';
 
 class SearchBar extends Component {
@@ -9,23 +11,39 @@ class SearchBar extends Component {
     super(props);
 
     this.state = {
-      term: ''
+      term: '',
+      loading: false
     };
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
   render () {
+    var buttonClass = classNames({
+      'button is-info is-medium': true,
+      'is-loading': this.state.loading
+    });
+    var inputClass = classNames({
+      'input is-medium': true,
+      'is-disabled': this.state.loading
+    });
     return(
       <form onSubmit={this.onFormSubmit} className="control is-grouped">
       <input
-        className="input is-medium"
+        className={inputClass}
+        disabled={this.state.loading}
         placeholder="Type in a City Name"
         value={this.state.term}
+        ref={(c) => this._input = c}
         onChange={this.onInputChange} />
-        <button type="submit" className="button is-info is-medium">Submit</button>
+      <button type="submit" className={buttonClass}>Submit</button>
       </form>
     );
+  }
+
+  componentDidMount () {
+    console.log(this);
+    this._input.focus();
   }
 
   onInputChange(e){
@@ -39,7 +57,12 @@ class SearchBar extends Component {
 
     // We need to fetch weather data
     this.props.fetchWeather(this.state.term);
-    this.setState({ term: ''});
+    this.setState({ loading: true });
+    setTimeout(()=> {
+      this.setState({ term: '', loading: false});
+      this._input.focus();
+
+    }, 1500);
 
   }
 
