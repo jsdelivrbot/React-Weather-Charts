@@ -14,15 +14,13 @@ class SearchBar extends Component {
 
   render () {
     return(
-      <form className="input-group">
+      <form className="control is-grouped">
       <input
+        className="input is-medium"
         placeholder="Type in a City Name"
-        className="form-control"
         value={this.state.term}
         onChange={this.onInputChange} />
-        <span className="input-group-btn">
-          <button type="submit" className="btn btn-secondary">Submit</button>
-        </span>
+        <button type="submit" className="button is-info is-medium">Submit</button>
       </form>
     );
   }
