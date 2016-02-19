@@ -12,7 +12,7 @@ export default function (state = [], action) {
       //return state.concat([action.payload.data]);
 
       // OR in ES6
-      return [ action.payload.state, ...state];
+      return [ action.payload.data, ...state];
 
     }
 
