@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class WeatherList extends Component {
 
-  render(){
+  render() {
     console.log(this.props.weather);
     return(
       <table className="table is-striped">
@@ -16,9 +16,17 @@ class WeatherList extends Component {
           </tr>
         </thead>
         <tbody>
-
+          {this.props.weather.map(this.renderWeather)}
         </tbody>
       </table>
+    );
+  }
+
+  renderWeather(cityData) {
+    return (
+      <tr key={cityData.city.id}>
+        <td>{cityData.city.name}</td>
+      </tr>
     );
   }
 
