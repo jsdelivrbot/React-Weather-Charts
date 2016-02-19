@@ -1,10 +1,16 @@
 import React from 'react';
 import { Component } from 'react';
 
+import SearchBar from '../containers/searchbar';
+
 export default class App extends Component {
   render() {
     return (
-      <div>React simple starter — now with reloading!</div>
+      <div>
+
+        <SearchBar />
+
+      </div>
     );
   }
 }
