@@ -11,7 +11,7 @@ class SearchBar extends Component {
     super(props);
 
     this.state = {
-      term: '',
+      term: 'Gold Coast',
       loading: false
     };
     this.onInputChange = this.onInputChange.bind(this);
@@ -44,6 +44,8 @@ class SearchBar extends Component {
   componentDidMount () {
     console.log(this);
     this._input.focus();
+
+    this.onFormSubmit();
   }
 
   onInputChange(e){
@@ -53,7 +55,9 @@ class SearchBar extends Component {
   }
 
   onFormSubmit(e){
-    e.preventDefault();
+    if(e){
+      e.preventDefault();
+    }
 
     // We need to fetch weather data
     this.props.fetchWeather(this.state.term);

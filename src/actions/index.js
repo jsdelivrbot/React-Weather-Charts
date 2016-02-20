@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const API_KEY = 'becd4aa142f0f707efaf65c62f74181a';
-const rootUrl = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
+const rootUrl = `http://api.openweathermap.org/data/2.5/forecast?units=metric&appid=${API_KEY}`;
 const countryCode = 'AU';
 
 //export action type to share with reducers
