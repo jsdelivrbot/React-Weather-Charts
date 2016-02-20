@@ -7,21 +7,29 @@ import GoogleMap from '../components/googlemap';
 class WeatherList extends Component {
 
   render() {
-    console.log(this.props.weather);
+    if(this.props.weather.length === 0){
+      return  false;
+    }
     return(
-      <table className="table is-striped">
-        <thead>
-          <tr>
-            <th>City</th>
-            <th>Temperature (&deg;C)</th>
-            <th>Pressure (hPa)</th>
-            <th>Humidity (%)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.props.weather.map(this.renderWeather)}
-        </tbody>
-      </table>
+      <section className="section">
+        <div className="container">
+
+          <table className="table is-striped">
+            <thead>
+              <tr>
+                <th>City</th>
+                <th>Temperature (&deg;C)</th>
+                <th>Pressure (hPa)</th>
+                <th>Humidity (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.props.weather.map(this.renderWeather)}
+            </tbody>
+          </table>
+
+        </div>
+      </section>
     );
   }
 

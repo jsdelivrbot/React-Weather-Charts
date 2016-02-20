@@ -8,16 +8,16 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <section className="section">
-          <div className="container">
-            <SearchBar />
+        <section className="hero is-info is-medium">
+          <div className="hero-content">
+            <div className="container">
+              <SearchBar />
+            </div>
           </div>
         </section>
-        <section className="section">
-          <div className="container">
-            <WeatherList />
-          </div>
-        </section>
+
+        <WeatherList />
+
       </div>
     );
   }

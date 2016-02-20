@@ -20,7 +20,7 @@ class SearchBar extends Component {
 
   render () {
     var buttonClass = classNames({
-      'button is-info is-medium': true,
+      'button is-default is-medium': true,
       'is-loading': this.state.loading
     });
     var inputClass = classNames({
