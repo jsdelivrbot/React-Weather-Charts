@@ -1,13 +1,13 @@
 {
-  "name": "ModernReact3",
+  "name": "React Weather Charts",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "",
   "main": "index.js",
-  "repository": "git@bitbucket.org:jinksi/modernreact3.git",
+  "repository": "git@github.com:Jinksi/React-Weather-Charts.git",
   "scripts": {
     "start": "webpack-dev-server --inline"
   },
-  "author": "",
+  "author": "Eric Jinks",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.2.1",
