@@ -1,23 +1,9 @@
-# ReduxSimpleStarter
+# React Weather Charts
 
-###Getting Started###
+A tiny app that charts a 5-day temperature, pressure &amp; humidity forecast, based on user input.
 
-There are two methods for getting started with this repo.
+I created this while following the **Modern React with Redux** course by [Stephen Grider](https://github.com/StephenGrider).
 
-####Familiar with Git?#####
-Checkout this repo, install depdencies, then start the gulp process with the following:
+Built using [React](https://github.com/facebook/react), [Redux](https://github.com/reactjs/redux), [React-Sparklines](https://github.com/borisyankov/react-sparklines) &amp; [React-Google-Maps](https://github.com/tomchentw/react-google-maps).
 
-```
-	> git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
-	> cd ReduxSimpleStarter
-	> npm install
-	> npm start
-```
-
-####Not Familiar with Git?#####
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-	> npm install
-	> npm start
-```
+Weather data from [openweathermap.org](http://openweathermap.org).
