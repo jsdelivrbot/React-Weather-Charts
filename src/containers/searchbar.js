@@ -11,7 +11,7 @@ class SearchBar extends Component {
     super(props);
 
     this.state = {
-      term: 'Gold Coast',
+      term: '',
       loading: false
     };
     this.onInputChange = this.onInputChange.bind(this);
@@ -44,8 +44,6 @@ class SearchBar extends Component {
   componentDidMount () {
     console.log(this);
     this._input.focus();
-
-    this.onFormSubmit();
   }
 
   onInputChange(e){
