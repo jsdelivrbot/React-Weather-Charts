@@ -1,11 +1,12 @@
 {
-  "name": "React Weather Charts",
+  "name": "React-Weather-Charts",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "repository": "git@github.com:Jinksi/React-Weather-Charts.git",
   "scripts": {
-    "start": "webpack-dev-server --inline"
+    "start": "webpack-dev-server --inline",
+    "build": "webpack"
   },
   "author": "Eric Jinks",
   "license": "ISC",
