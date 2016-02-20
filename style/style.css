@@ -1,0 +1,11 @@
+.table td,
+.table th{
+  vertical-align: middle;
+  text-align: center;
+}
+.table td{
+  padding: 15px 0;
+}
+td:first-of-type{
+  /*vertical-align: top;*/
+}
